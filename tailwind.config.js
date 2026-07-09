@@ -7,28 +7,55 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Claude AI inspired palette
+        // Anthropic Claude Official Branding
+        claude: {
+          dark: '#141413',      // Primary text, dark backgrounds
+          light: '#faf9f5',     // Light backgrounds, text on dark
+          gray: '#b0aea5',      // Secondary elements
+          'gray-light': '#e8e6dc', // Subtle backgrounds
+          // Accent colors
+          orange: '#d97757',    // Primary accent
+          blue: '#6a9bcc',      // Secondary accent
+          green: '#788c5d',     // Tertiary accent
+        },
+        // Legacy primary colors (kept for compatibility)
         primary: {
-          50: '#f0f4f8',
-          100: '#e1e8f0',
-          500: '#4A90E2',
-          700: '#2563eb',
-          900: '#1B2838',
+          50: '#faf9f5',        // Claude light
+          100: '#e8e6dc',       // Claude light gray
+          500: '#6a9bcc',       // Claude blue
+          700: '#4a7aa8',
+          900: '#141413',       // Claude dark
         },
         accent: {
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
+          400: '#d97757',       // Claude orange
+          500: '#6a9bcc',       // Claude blue
+          600: '#788c5d',       // Claude green
         },
         surface: {
-          50: '#F1F3F4',
-          100: '#e8eaed',
-          200: '#dadce0',
-          900: '#202124',
+          50: '#faf9f5',        // Claude light
+          100: '#e8e6dc',       // Claude light gray
+          200: '#d9d6cc',
+          900: '#141413',       // Claude dark
         },
       },
       fontFamily: {
-        sans: ['Inter', 'Sora', 'sans-serif'],
+        // Anthropic Claude Official Fonts
+        heading: ['Poppins', 'Arial', 'sans-serif'],
+        body: ['Lora', 'Georgia', 'serif'],
+        // Fallbacks
+        sans: ['Poppins', 'Arial', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'serif'],
+      },
+      fontSize: {
+        // Heading hierarchy
+        'heading-sm': ['16px', { lineHeight: '1.5', fontWeight: '700' }],
+        'heading-md': ['20px', { lineHeight: '1.4', fontWeight: '700' }],
+        'heading-lg': ['24px', { lineHeight: '1.3', fontWeight: '700' }],
+        'heading-xl': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
+        // Body text
+        'body-sm': ['14px', { lineHeight: '1.5', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-lg': ['18px', { lineHeight: '1.6', fontWeight: '400' }],
       },
       borderRadius: {
         lg: '12px',
